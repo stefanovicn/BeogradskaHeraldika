@@ -1,0 +1,61 @@
+.sadrzaj{
+    display: flex;
+}
+.slika{
+    padding-right: 20px;
+    padding-top: 30px;
+}
+.slika img{
+    height: 216px;
+    width: 216px;
+}
+.naziv{
+    text-align: center;
+}
+.podnaslov{
+    font-style: italic;
+    text-align: center;
+    font-weight: lighter;
+    font-size:medium;
+}
+.sidemenu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sidemenu{
+    border: 3px solid black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transform: translateX(-100%);
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.slika img{
+    opacity: 0;
+    transform: rotateY(-90deg);
+    animation: flipIn 1s ease forwards;
+}
+
+.sidemenu li a{
+    text-decoration: none;
+    color: rgb(19, 78, 255);
+}
+
+@keyframes slideInLeft {
+    from{
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes flipIn {
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}

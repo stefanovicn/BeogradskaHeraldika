@@ -1,0 +1,41 @@
+.meni-opstine-link{
+    padding-bottom: 20px;
+}
+
+.meni-opstine-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.meni-opstine {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    filter: blur(10px);
+    animation: blurIn 1s ease forwards;
+}
+
+.lista-link {
+    text-decoration: none;
+    color: rgb(33, 64, 154);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-slika {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+@keyframes blurIn {
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}

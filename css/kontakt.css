@@ -1,0 +1,58 @@
+.forma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.kontakt-label {
+    color: #1a1a1a;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.kontakt-input {
+    padding: 10px;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="email"] {
+    background-color: #ffffff; 
+}
+
+textarea {
+    background-color: #ffffff; 
+}
+
+input[type="submit"] {
+    background-color: rgb(237, 28, 36);
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(19, 78, 255); 
+}
+
+.kontakt-input:not(:last-of-type) {
+    margin-bottom: 15px;
+}
