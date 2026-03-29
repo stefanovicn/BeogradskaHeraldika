@@ -1,8 +1,20 @@
+header{
+    display: flex;
+    text-align: left;
+    /* border: 3px solid gray; */
+    background-color: #ffffff75;
+    padding: 30px;
+    border: 5px solid black;
+    border-radius: 30px;
+    padding-left: 10px;
+}
 *{
-    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.container{
+    margin-left: 400px;
+    margin-right: 400px;
+}
 body{
     margin: 0;
     background-image: url('../img/panorama2.jpg');
@@ -10,75 +22,60 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.container{
-    width: 90%;
-    max-width: 1200px;
-    margin: 30px auto;
-}
-
-header{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
-    background-color: #ffffff75;
-    padding: 30px 20px;
-    border: 5px solid black;
-    border-radius: 30px;
+    align-content: flex-start;
 }
 
 .glavni-grb{
+    /* transform: scale(0.5);
+    transform-origin: top left; */
     height: 240px;
     width: 240px;
-    max-width: 100%;
-    display: block;
+    display: flex;
+    padding-right: 5px;
     transform: translateX(-100%);
     animation: slideInLeft 1s ease-out forwards;
 }
-
-.desni{
-    flex: 1;
-    min-width: 0;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
-
-.naslov{
-    display: flex;
-    align-items: center;
-    text-shadow: 4px 4px 6px #000000;
-    color: white;
-    margin-bottom: 20px;
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+    }
 }
-
-.naslov h1{
-    margin: 0;
-    font-size: 3rem;
-}
-
 .meni{
+    height: 100px;
     display: flex;
-    justify-content: flex-start;
+    align-content: flex-start;
+    justify-content: left;
 }
 
 .meni-lista{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     list-style-type: none;
-    padding-left: 0;
-    margin: 0;
+    padding-left: 0px;
 }
 
 .meni-dugme{
     display: flex;
-    padding: 14px 24px;
-    border-radius: 8px;
+    padding: 5px;
+    border-radius: 4px;
     background-color: rgb(33, 64, 154);
     justify-content: center;
+    text-align: center;
     align-items: center;
-    min-width: 140px;
+    /* border: 4px solid rgb(237, 28, 36); */
+    width: 100px;
     opacity: 0;
     animation: fadeIn 0.5s ease-in forwards;
     transition: background-color 0.3s ease;
@@ -92,10 +89,7 @@ header{
 .meni-link{
     text-decoration: none;
     color: white;
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 1.1rem;
+    /* height: 40px; */
 }
 
 .aktivan{
@@ -103,44 +97,46 @@ header{
     font-weight: bold;
 }
 
+.naslov{
+    height: 100px;
+    display: flex;
+    text-shadow: 4px 4px 6px #000000;
+    color: white;
+}
+
 main{
+    /* display: flex; */
     text-align: left;
+    /* border: 3px solid gray; */
     background-color: rgba(255, 255, 255, 0.912);
-    padding: 30px 20px;
+    padding: 30px;
     border: 5px solid black;
     border-radius: 30px;
-    margin-top: 25px;
+    padding-left: 10px;
 }
 
 footer{
     display: flex;
-    gap: 15px;
     text-align: center;
+    /* border: 3px solid gray; */
     background-color: #ffffff75;
-    padding: 20px;
+    padding: 30px;
     border: 5px solid black;
     border-radius: 30px;
+    padding-left: 10px;
     color: white;
+    align-content: center;
     align-items: center;
-    justify-content: center;
-    margin-top: 25px;
 }
 
 .footer-grb{
     height: 100px;
     width: 100px;
-    max-width: 100%;
-}
-
-.footer-par{
-    text-shadow: 2px 2px 4px #000000;
-    margin: 0;
 }
 
 .mapa{
-    width: 100%;
-    max-width: 350px;
-    height: auto;
+    height: 467px;
+    width: 350px;
 }
 
 .mapa-par{
@@ -149,18 +145,17 @@ footer{
 
 .lista{
     display: flex;
-    gap: 30px;
+    gap: 70px;
     justify-content: center;
     flex-direction: column;
 }
-
 .bg{
     padding: 20px;
     border: 3px solid black;
     background-color: white;
     border-radius: 30px;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 
 .opstine{
@@ -168,21 +163,27 @@ footer{
     justify-content: space-between;
     gap: 20px;
 }
-
-.gradske,
-.prigradske{
+.gradske, .prigradske{
     flex: 1;
+    /* justify-items: center; */
+}
+.gradske{
+    /* padding-left: 18px; */
     padding: 20px;
     border: 3px solid black;
     background-color: white;
     border-radius: 30px;
-    min-width: 0;
+}
+
+.prigradske{
+    border: 3px solid black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
 }
 
 .naslov-glavna{
     text-align: center;
-    margin-top: 0;
-    font-size: 3rem;
 }
 
 .lista-link{
@@ -195,183 +196,73 @@ footer{
 }
 
 .paragrafi{
-    padding: 10px 20px 20px 20px;
-    line-height: 1.6;
+    padding: 30px 30px;
+
 }
+
+/* .lista-slika{
+    height: 140px;
+    width: 140px;
+} */
 
 form{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 500px;
-    gap: 12px;
+    width: 40%;
+    
 }
-
 textarea{
-    width: 100%;
-    max-width: 100%;
-    min-height: 140px;
-    resize: vertical;
+    max-width: 400px;
+    max-height: 400px;
 }
 
-img{
-    max-width: 100%;
+.footer-par{
+    text-shadow: 2px 2px 4px #000000;
 }
 
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-@keyframes slideInLeft {
-    from{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Tablet */
-@media (max-width: 992px){
-    .container{
-        width: 94%;
-        margin: 20px auto;
-    }
-
-    .naslov h1{
-        font-size: 2.3rem;
-    }
-
-    .naslov-glavna{
-        font-size: 2.4rem;
-    }
-
-    .glavni-grb{
-        width: 200px;
-        height: 200px;
-    }
-
-    .opstine{
-        flex-direction: column;
-    }
-}
-
-/* Telefon */
 @media (max-width: 768px){
+    .container{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
     body{
         background-attachment: scroll;
     }
 
-    .container{
-        width: 95%;
-        margin: 15px auto;
-    }
-
     header{
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        padding: 20px 15px;
-    }
-
-    .glavni-grb{
-        width: 170px;
-        height: 170px;
-        margin: 0 auto;
     }
 
     .naslov{
+        height: auto;
         justify-content: center;
         text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .naslov h1{
-        font-size: 1.9rem;
-        line-height: 1.2;
     }
 
     .meni{
+        height: auto;
         justify-content: center;
-        width: 100%;
     }
 
     .meni-lista{
         flex-direction: column;
-        width: 100%;
+        gap: 15px;
         align-items: center;
-        gap: 12px;
-    }
-
-    .meni-dugme{
-        width: 100%;
-        max-width: 280px;
-        min-width: 0;
-    }
-
-    main{
-        padding: 20px 15px;
-    }
-
-    .naslov-glavna{
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .paragrafi{
-        padding: 10px 5px;
     }
 
     .opstine{
         flex-direction: column;
     }
 
-    .gradske,
-    .prigradske,
-    .bg{
-        padding: 15px;
+    form{
+        width: 100%;
     }
 
-    footer{
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .footer-grb{
-        width: 80px;
-        height: 80px;
-    }
-}
-
-/* Manji telefoni */
-@media (max-width: 480px){
-    .naslov h1{
-        font-size: 1.6rem;
-    }
-
-    .naslov-glavna{
-        font-size: 1.6rem;
-    }
-
-    .glavni-grb{
-        width: 140px;
-        height: 140px;
-    }
-
-    .meni-link{
-        font-size: 1rem;
-    }
-
-    header,
-    main,
-    footer{
-        border-width: 3px;
-        border-radius: 20px;
+    textarea{
+        width: 100%;
+        max-width: 100%;
     }
 }
