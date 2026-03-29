@@ -39,3 +39,30 @@
         filter: blur(0);
     }
 }
+@media (max-width: 768px) {
+    .meni-opstine-lista {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .meni-opstine {
+        width: calc(50% - 16px);
+        justify-content: center;
+    }
+
+    .lista-slika {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .meni-opstine {
+        width: 100%;
+    }
+
+    .lista-slika {
+        width: 100px;
+        height: 100px;
+    }
+}
