@@ -7,12 +7,15 @@
     border-radius: 8px;
     max-width: 600px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .kontakt-label {
@@ -26,6 +29,8 @@ form {
     border: 2px solid #1a1a1a;
     border-radius: 4px;
     font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="email"] {
@@ -33,7 +38,10 @@ input[type="email"] {
 }
 
 textarea {
-    background-color: #ffffff; 
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -47,6 +55,8 @@ input[type="submit"] {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="submit"]:hover {
@@ -57,7 +67,7 @@ input[type="submit"]:hover {
     margin-bottom: 15px;
 }
 
-/* TAABLET */
+/* TABLET */
 @media (max-width: 768px) {
     .forma {
         padding: 15px;
