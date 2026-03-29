@@ -56,3 +56,51 @@ input[type="submit"]:hover {
 .kontakt-input:not(:last-of-type) {
     margin-bottom: 15px;
 }
+
+/* TAABLET */
+@media (max-width: 768px) {
+    .forma {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .kontakt-label {
+        font-size: 1em;
+    }
+
+    .kontakt-input {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    input[type="submit"] {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
+/* TELEFON */
+@media (max-width: 480px) {
+    .forma {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .kontakt-label {
+        font-size: 0.9em;
+    }
+
+    .kontakt-input {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    input[type="submit"] {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+}

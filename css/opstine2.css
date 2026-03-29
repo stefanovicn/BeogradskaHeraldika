@@ -1,9 +1,12 @@
-.sadrzaj{
+.sadrzaj {
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 .slika{
-    padding-right: 20px;
+    padding-left: 30px;
     padding-top: 30px;
+    justify-items: center;
 }
 .slika img{
     height: 216px;
@@ -23,20 +26,27 @@
     flex-direction: column;
     gap: 10px;
 }
-.sidemenu{
+.sidemenu {
+    width: 100%;
     border: 3px solid black;
     background-color: white;
     border-radius: 30px;
     padding: 20px;
     margin-bottom: 20px;
     transform: translateX(-100%);
-    animation: slideInLeft 1s ease-out forwards;
+    animation: slide 1s ease-out forwards;
+}
+
+.tekst {
+    flex: 1;
+    padding: 20px;
+    
 }
 
 .slika img{
     opacity: 0;
     transform: rotateY(-90deg);
-    animation: flipIn 1s ease forwards;
+    animation: okreni 1s ease forwards;
 }
 
 .sidemenu li a{
@@ -44,7 +54,7 @@
     color: rgb(19, 78, 255);
 }
 
-@keyframes slideInLeft {
+@keyframes slide {
     from{
         opacity: 0;
     }
@@ -53,9 +63,59 @@
     }
 }
 
-@keyframes flipIn {
+@keyframes okreni {
     to {
         opacity: 1;
         transform: rotateY(0);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+    .sadrzaj {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .sidemenu, .tekst {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .slika {
+        padding-left: 18px;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* TELEFON */
+@media (max-width: 480px) {
+    .sadrzaj {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .sidemenu {
+        width: 94%;
+        margin: 0 auto;
+    }
+
+    .glavni-sadrzaj {
+        width: 100%;
+    }
+
+    .slika {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-end;
     }
 }

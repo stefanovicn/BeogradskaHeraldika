@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/kontakt.css">
     <link rel="shortcut icon" href="img/Ocilo.ico" type="image/x-icon" />
-    <script src="js/index.js"></script>
+    
 </head>
 <body>
     <header>
@@ -17,13 +17,18 @@
                     <h1>Beogradska heraldika</h1>
                 </div>
         
-                <div class="meni">
+                <nav class="meni">
                     <ul class="meni-lista">
                         <li class="meni-dugme"><a href="index.html" class="meni-link">Početna</a></li>
                         <li class="meni-dugme"><a href="opstine.html" class="meni-link">Opštine</a></li>
                         <li class="meni-dugme aktivan"><a href="#" class="meni-link">Kontakt</a></li>
                     </ul>
-                </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
             </div>
     </header>
     <main>
@@ -33,11 +38,11 @@
         <div class="forma">
             <form action="">
                 <label for="email" class="kontakt-label">E-mail:</label>
-                <input type="email" name="email" id="" class="kontakt-input" placeholder="Vaš e-mail">
+                <input type="email" name="email" id="" class="kontakt-input" placeholder="Vaš e-mail" required>
                 <br>
                 <br>
                 <label for="area" class="kontakt-label">Komentar:</label>
-                <textarea name="area" id="" rows="10" cols="40" class="kontakt-input" placeholder="Vaš komentar"></textarea><br><br>
+                <textarea name="area" id="" rows="10" cols="40" class="kontakt-input" placeholder="Vaš komentar" required></textarea><br><br>
                 <input type="submit" value="Pošalji komentar">
             </form>
         </div>
@@ -48,5 +53,6 @@
         <img src="img/beograd-osnovni.png" alt="Grb Beograda" class="footer-grb">
         <p class="footer-par">&copy; Beogradska heraldika 2024 - Nikola i Luka Stefanović</p>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

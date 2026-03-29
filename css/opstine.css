@@ -16,7 +16,7 @@
     text-align: center;
     opacity: 0;
     filter: blur(10px);
-    animation: blurIn 1s ease forwards;
+    animation: blur 1s ease forwards;
 }
 
 .lista-link {
@@ -33,7 +33,7 @@
     margin-bottom: 5px;
 }
 
-@keyframes blurIn {
+@keyframes blur {
     to {
         opacity: 1;
         filter: blur(0);
