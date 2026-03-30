@@ -83,8 +83,8 @@ body{
 }
 .meni-lista{
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
     list-style: none;
     padding: 0;
