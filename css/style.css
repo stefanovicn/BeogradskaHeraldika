@@ -182,7 +182,6 @@ footer{
 .lista{
     display: flex;
     gap: 30px;
-    justify-content: flex-start;
     flex-direction: column;
 }
 
