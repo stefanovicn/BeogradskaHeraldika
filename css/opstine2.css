@@ -28,11 +28,15 @@
     font-weight: lighter;
     font-size: medium;
 }
-
+/*
 .sidemenu ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
+} */
+ .sidemenu ul{
+    display: block;        
+    padding-left: 25px;    
 }
 
 .sidemenu {
